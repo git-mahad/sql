@@ -1,0 +1,35 @@
+domain specific: just for structural data (relational database)
+declarative language: what to do(not have to mentioned how to do)
+DDL: create, alter, drop, truncat, rename (deals with table)
+DML: select, insert, update, delete
+DCL: grant, revoke 
+TCL: commit (permanent change), rollback(undo), savepoint(like downloading saving at 30%)
+
+A DB query is a code written in order to get the information back from the database.
+
+query to join 3 tables
+
+commands
+
+desc table_name //description to show the schema of table
+alter //add/remove column, modify datatype/datatype_Length, add constrain
+schema // structure mean table
+alter vs update: ddl, just change structure | dml, change data
+delete | drop | truncate: dml,based condition,del all rows,can work where, rollback is possible| ddl,del complete table | ddl,del complete table,faster,roll back not possible
+constrain: condition on column(attribute)
+check, default, 
+select name from employee where salary = (select Max(salary) from employee)
+first exe inner query just one time
+
+Select max(salary) from emp where salary <> (select max(salary) from emp)
+
+Select name from emp where salary = (Select max(salary) from emp where salary <> (select max(salary) from emp))
+
+select dept from emp group by dept
+
+// dept dept value should be same, except same value i can use only aggregate function
+
+constrain
+pk, fk, null, not null, default, check, unique
+
+<> = not equal to 
