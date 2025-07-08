@@ -2,13 +2,13 @@
 
 This repository contains solutions to various **SQL LeetCode** problems. It serves as a resource for learning and improving SQL skills by solving real-world problems commonly asked in technical interviews.
 
-## 📌 Features
+## Features
 - Solutions to **LeetCode SQL** problems
 - Well-structured and optimized queries
 - Covers **basic to advanced** SQL concepts
 - Uses **MySQL** & **PostgreSQL** syntax (as needed)
 
-## 🚀 Getting Started
+## Getting Started
 1. Clone the repository:
    ```sh
    git clone https://github.com/git-mahad/sql.git
@@ -17,7 +17,7 @@ This repository contains solutions to various **SQL LeetCode** problems. It serv
 2. Open `.sql` files in any SQL editor (MySQL Workbench, PostgreSQL, etc.).
 3. Run the queries on a compatible SQL engine.
 
-## 📝 Topics Covered
+## Topics Covered
 - **SELECT, WHERE, GROUP BY, HAVING**
 - **JOINs (INNER, LEFT, RIGHT, FULL)**
 - **Subqueries & CTEs (Common Table Expressions)**
@@ -26,7 +26,7 @@ This repository contains solutions to various **SQL LeetCode** problems. It serv
 - **CASE Statements & Conditional Queries**
 - **Indexes & Performance Optimization**
 
-## 📚 How to Contribute
+## How to Contribute
 We welcome contributions! Follow these steps:
 1. **Fork** the repository.
 2. Create a **new branch** (`git checkout -b feature-branch`).
@@ -35,6 +35,6 @@ We welcome contributions! Follow these steps:
 5. Push to the branch (`git push origin feature-branch`).
 6. Open a **Pull Request (PR)**.
 
-## 🤝 Connect with Me
+## Connect with Me
 Feel free to reach out for discussions or collaborations.
 [@Muhammad Mahad](https://www.linkedin.com/in/mahad-dev)
