@@ -32,4 +32,41 @@ select dept from emp group by dept
 constrain
 pk, fk, null, not null, default, check, unique
 
-<> = not equal to 
+<> mean not equal to 
+
+result of sub-query is stored in temporary place 
+
+=============================================================
+                  Window function
+=============================================================
+Rank 90, 85, 85, 85, 82, 82, 80 (1,2,2,2,5,5,7)
+Rank_Dense 90, 85, 85, 85, 82, 82, 80 (1,2,2,2,3,3,4)
+Row_Number 90, 85, 85, 85, 82, 82, 80 (1,2,3,4,5,6,7)
+select 
+	studentId, concat(firstName, LastName) as FullName,
+    row_number() over(order by marks desc) as number,
+    Rank() over(order by marks desc) as rnk,
+    Dense_Rank() over(order by marks desc) as des_rank
+    from StudentMarks
+    order by Marks desc;
+===============================================================
+                  Lead && lag
+===============================================================
+
+SALES_TABLE:
+sale_id | product_id | sale_date  | amount
+--------|------------|------------|-------
+1       | 101        | 2023-01-05 | 150
+2       | 101        | 2023-01-12 | 200
+3       | 102        | 2023-01-08 | 300
+4       | 101        | 2023-01-20 | 180
+5       | 102        | 2023-01-15 | 250
+6       | 103        | 2023-01-10 | 400
+
+1- For each product, show the current sale amount along with the next sale amount (use LEAD)
+2- For each product, show the current sale amount along with the previous sale amount (use LAG)
+3- For each product ordered by sale_date, calculate the difference between the current sale amount and the next sale amount
+
+2- Select *, lag(amount, 1, 0) over(order by sale_id ) as previous_sale_amount from Sales_table;
+-- lad/lead(column, number of rows omitted, optional(default_value if not found))	
+3- select *, lead(amount, 1, 0) over(order by sale_id) as NextAmount, amount - lead(amount, 1, 0) over(order by sale_id) as CWNext from Sales_Table;
